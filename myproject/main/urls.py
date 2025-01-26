@@ -22,8 +22,10 @@ from myapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.index, name='index'),
     path('', views.index, name='index'),
     path('portfolio-details/', views.portfolio_details, name='portfolio-details'),
     path('sarter-page/', views.sarter_page, name='sarter-page'),
     path('service-details/', views.service_details, name='service-details'),
+    path('api/contact/', views.ContactView.as_view(), name='contact'),  # Added trailing slash
 ]
