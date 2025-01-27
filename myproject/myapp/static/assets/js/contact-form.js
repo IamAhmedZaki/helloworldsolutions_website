@@ -1,11 +1,12 @@
 const form = document.querySelector('#contact-form');
+const spinner = document.querySelector('#form-spinner');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  // Display loading spinner
-  document.querySelector('.loading').style.display = 'block';
-  document.querySelector('.sent-message').style.display = 'none';
+  // Show loading spinner and hide messages
+  spinner.style.display = 'inline-block';
+  document.querySelector('.success-message').style.display = 'none';
   document.querySelector('.error-message').style.display = 'none';
 
   const formData = {
@@ -25,13 +26,12 @@ form.addEventListener('submit', async (e) => {
       body: JSON.stringify(formData),
     });
 
-    // Hide loading spinner
-    document.querySelector('.loading').style.display = 'none';
-
     if (response.ok) {
-      document.querySelector('.sent-message').style.display = 'block';
+      // Show success message and reset form
+      document.querySelector('.success-message').style.display = 'block';
       form.reset();
     } else {
+      // Show error message with details if available
       const errorData = await response.json();
       document.querySelector('.error-message').textContent =
         errorData.message || 'An error occurred.';
@@ -39,9 +39,10 @@ form.addEventListener('submit', async (e) => {
     }
   } catch (error) {
     console.error('Error:', error);
-    document.querySelector('.loading').style.display = 'none';
     document.querySelector('.error-message').textContent =
       'Failed to send your message. Please try again later.';
     document.querySelector('.error-message').style.display = 'block';
+  } finally {
+    spinner.style.display = 'none'; // Hide spinner after processing
   }
 });
