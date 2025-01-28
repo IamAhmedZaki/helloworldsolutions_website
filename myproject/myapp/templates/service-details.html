@@ -83,56 +83,71 @@
     <section id="service-details" class="service-details section">
 
       <div class="container">
-
         <div class="row gy-5">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="service-box">
-              <h4>Serices List</h4>
-              <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
-              </div>
-            </div><!-- End Services List -->
-
-          
-
-            <div class="help-box d-flex flex-column justify-content-center align-items-center">
-              <i class="bi bi-headset help-icon"></i>
-              <h4>Have a Question?</h4>
-              <p class="d-flex align-items-center mt-2 mb-0"><i class="bi bi-telephone me-2"></i> <span>+1 5589 55488 55</span></p>
-              <p class="d-flex align-items-center mt-1 mb-0"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@example.com">contact@example.com</a></p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <!-- Services List -->
+                <div class="service-box">
+                    <h4>Services List</h4>
+                    <div class="services-list">
+                      <a href="#" data-service="web-design">
+                          <i class="bi bi-arrow-right-circle"></i><span>Web Design</span>
+                      </a>
+                      <a href="#" data-service="web-development">
+                          <i class="bi bi-arrow-right-circle"></i><span>Web Development</span>
+                      </a>
+                      <a href="#" data-service="product-management">
+                          <i class="bi bi-arrow-right-circle"></i><span>Product Management</span>
+                      </a>
+                      <a href="#" data-service="graphic-design">
+                          <i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span>
+                      </a>
+                      <a href="#" data-service="marketing">
+                          <i class="bi bi-arrow-right-circle"></i><span>Marketing</span>
+                      </a>
+                  </div>
+                </div>
+                <!-- End Services List -->
+    
+                <!-- Help Box -->
+                <div class="help-box d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-headset help-icon"></i>
+                    <h4>Have a Question?</h4>
+                    <p class="d-flex align-items-center mt-2 mb-0">
+                        <i class="bi bi-telephone me-2"></i> <span>+1 5589 55488 55</span>
+                    </p>
+                    <p class="d-flex align-items-center mt-1 mb-0">
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:contact@example.com">contact@example.com</a>
+                    </p>
+                </div>
             </div>
-
-          </div>
-
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
-          </div>
-
+    
+            <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
+                <!-- Service Image -->
+                <img id="service-image" src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
+    
+                <!-- Service Title -->
+                <h3 id="service-title">Default Service Title</h3>
+    
+                <!-- Service Description -->
+                <p id="service-description">
+                    Default description about the service. Click on a service to learn more.
+                </p>
+    
+                <!-- Service Features List -->
+                <ul id="service-list">
+                    <li><i class="bi bi-check-circle"></i> <span>Feature 1</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Feature 2</span></li>
+                    <li><i class="bi bi-check-circle"></i> <span>Feature 3</span></li>
+                </ul>
+    
+                <!-- Additional Service Details -->
+                <p id="service-details">
+                    Default detailed description of the service. Select a service to explore.
+                </p>
+            </div>
         </div>
-
-      </div>
-
+    </div>
     </section><!-- /Service Details Section -->
 
   </main>
@@ -225,9 +240,52 @@
 
 
 
-<!-- Vendor JS Files -->
+<!-- Add this script block before your existing script tag -->
+<script>
+  // Service data with Django static paths
+  window.servicesData = {
+      "web-design": {
+          image: "{% static 'assets/img/web-design.jpg' %}",
+          title: "Web Design",
+          description: "We create stunning and user-friendly web designs tailored to your brand.",
+          features: ["Responsive Design", "Custom UI/UX", "SEO Optimization"],
+          details: "Our web design services focus on delivering visually appealing and functional websites that drive engagement and conversions."
+      },
+      "web-development": {
+          image: "{% static 'assets/img/web-development.jpeg' %}",
+          title: "Web Development",
+          description: "We build robust and scalable web applications to meet your business needs.",
+          features: ["Frontend Development", "Backend Development", "API Integration"],
+          details: "Our web development team specializes in creating custom solutions that are both efficient and scalable."
+      },
+      "product-management": {
+          image: "{% static 'assets/img/product-management.jpg' %}",
+          title: "Product Management",
+          description: "We help you manage and optimize your product lifecycle for maximum success.",
+          features: ["Product Strategy", "Roadmap Planning", "Market Analysis"],
+          details: "Our product management services ensure your product aligns with market demands and business goals."
+      },
+      "graphic-design": {
+          image: "{% static 'assets/img/graphic-design.jpg' %}",
+          title: "Graphic Design",
+          description: "We craft visually compelling designs that resonate with your audience.",
+          features: ["Logo Design", "Branding", "Print & Digital Media"],
+          details: "Our graphic design team creates unique and impactful visuals that elevate your brand."
+      },
+      "marketing": {
+          image: "{% static 'assets/img/marketing.jpg' %}",
+          title: "Marketing",
+          description: "We develop data-driven marketing strategies to grow your business.",
+          features: ["Digital Marketing", "Social Media Management", "Content Creation"],
+          details: "Our marketing services are designed to increase your brand visibility and drive customer engagement."
+      }
+  };
+</script>
+
+
+  <!-- Vendor JS Files -->
 <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<!-- <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script> -->
 <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
 <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
 <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
@@ -237,6 +295,9 @@
 
 <!-- Main JS File -->
 <script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/service.js' %}"></script>
+
+
 
 
 </body>
