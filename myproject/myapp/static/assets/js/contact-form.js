@@ -5,7 +5,7 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // Show loading spinner and hide messages
-  spinner.style.display = 'inline-block';
+  // spinner.style.display = 'inline-block';
   document.querySelector('.success-message').style.display = 'none';
   document.querySelector('.error-message').style.display = 'none';
 
@@ -42,7 +42,7 @@ form.addEventListener('submit', async (e) => {
     document.querySelector('.error-message').textContent =
       'Failed to send your message. Please try again later.';
     document.querySelector('.error-message').style.display = 'block';
-  } finally {
-    spinner.style.display = 'none'; // Hide spinner after processing
+  // } finally {
+  //   // spinner.style.display = 'none'; // Hide spinner after processing
   }
 });
