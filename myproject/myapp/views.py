@@ -12,11 +12,32 @@ def index(request):
 def portfolio_details(request):
     return render(request, 'portfolio-details.html')
 
+def portfolio_details2(request):
+    return render(request, 'portfolio-details2.html')
+
+def portfolio_details3(request):
+    return render(request, 'portfolio-details3.html')
+
 def sarter_page(request):
     return render(request, 'sarter-page.html')
 
 def service_details(request):
     return render(request, 'service-details.html')
+
+def service_details2(request):
+    return render(request, 'service-details2.html')
+
+def service_details3(request):
+    return render(request, 'service-details3.html')
+
+def service_details4(request):
+    return render(request, 'service-details4.html')
+
+def service_details5(request):
+    return render(request, 'service-details5.html')
+
+def service_details6(request):
+    return render(request, 'service-details6.html')
 
 # API View for handling contact form submissions
 class ContactView(APIView):

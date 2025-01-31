@@ -2,14 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - eNno Bootstrap Template</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
-  {% load static %}
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio Details - eNno Bootstrap Template</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
 
 <!-- Favicons -->
 <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
@@ -18,7 +15,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <!-- Vendor CSS Files -->
 <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -29,8 +26,6 @@
 
 <!-- Main CSS File -->
 <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
-
-
   <!-- =======================================================
   * Template Name: eNno
   * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
@@ -40,141 +35,121 @@
   ======================================================== -->
 </head>
 
-<body class="service-details-page">
-
+<<body class="portfolio-details-page">
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
       <a href="{% url 'index' %}" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src={% static "assets/img/logo.png"%} alt="">
         <h1 class="sitename">eNno</h1>
       </a>
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'index' %}"> Back To Home</a></li>
-        
+          <li><a href="{% url 'index' %}">Back To Home</a></li>
+          
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      {% comment %} <a class="btn-getstarted" href="index.html#about">Get Started</a> {% endcomment %}
-
+      <!-- <a class="btn-getstarted" href="#about">Get Started</a> -->
     </div>
   </header>
+
 
   <main class="main">
 
     <!-- Page Title -->
     <div class="page-title">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Service Details</h1>
+        <h1 class="mb-2 mb-lg-0">Portfolio Details</h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Service Details</li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current">Portfolio Details</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
 
-      <div class="container">
-        <div class="row gy-5">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <!-- Services List -->
-                <div class="service-box">
-                    <h4>Services List</h4>
-                    <div class="services-list">
-                      <a href="#" data-service="web-design">
-                          <i class="bi bi-arrow-right-circle"></i><span>Web Design</span>
-                      </a>
-                      <a href="#" data-service="web-development">
-                          <i class="bi bi-arrow-right-circle"></i><span>Web Development</span>
-                      </a>
-                      <a href="#" data-service="product-management">
-                          <i class="bi bi-arrow-right-circle"></i><span>Product Management</span>
-                      </a>
-                      <a href="#" data-service="graphic-design">
-                          <i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span>
-                      </a>
-                      <a href="#" data-service="marketing">
-                          <i class="bi bi-arrow-right-circle"></i><span>Marketing</span>
-                      </a>
-                  </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/app-1.jpg' %}" alt="">
                 </div>
-                <!-- End Services List -->
-    
-                <!-- Help Box -->
-                <div class="help-box d-flex flex-column justify-content-center align-items-center">
-                    <i class="bi bi-headset help-icon"></i>
-                    <h4>Have a Question?</h4>
-                    <p class="d-flex align-items-center mt-2 mb-0">
-                        <i class="bi bi-telephone me-2"></i> <span>+1 5589 55488 55</span>
-                    </p>
-                    <p class="d-flex align-items-center mt-1 mb-0">
-                        <i class="bi bi-envelope me-2"></i>
-                        <a href="mailto:contact@example.com">contact@example.com</a>
-                    </p>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/product-1.jpg' %}" alt="">
                 </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/branding-1.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/books-1.jpg' %}" alt="">
+                </div>
+
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
-    
-            <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-                <!-- Service Image -->
-                <img id="service-image" src="{% static 'assets/img/services.jpg' %}" alt="" class="img-fluid services-img">
-    
-                <!-- Service Title -->
-                <h3 id="service-title">Default Service Title</h3>
-    
-                <!-- Service Description -->
-                <p id="service-description">
-                    Default description about the service. Click on a service to learn more.
-                </p>
-    
-                <!-- Service Features List -->
-                <ul id="service-list">
-                    <li><i class="bi bi-check-circle"></i> <span>Feature 1</span></li>
-                    <li><i class="bi bi-check-circle"></i> <span>Feature 2</span></li>
-                    <li><i class="bi bi-check-circle"></i> <span>Feature 3</span></li>
-                </ul>
-    
-                <!-- Additional Service Details -->
-                <p id="service-details">
-                    Default detailed description of the service. Select a service to explore.
-                </p>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Project date</strong>: 01 March, 2020</li>
+                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+              </ul>
             </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Exercitationem repudiandae officiis neque suscipit</h2>
+              <p>
+                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+              </p>
+            </div>
+          </div>
+
         </div>
-    </div>
-    </section><!-- /Service Details Section -->
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
 
   </main>
 
   <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="d-flex align-items-center">
+          <a href="{% url 'index' %}" class="d-flex align-items-center">
             <span class="sitename">eNno</span>
           </a>
           <div class="footer-contact pt-3">
@@ -185,7 +160,7 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
@@ -203,7 +178,7 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
           </ul>
-        </div>
+        </div> -->
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
@@ -238,67 +213,18 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-
-
-<!-- Add this script block before your existing script tag -->
-<script>
-  // Service data with Django static paths
-  window.servicesData = {
-      "web-design": {
-          image: "{% static 'assets/img/web-design.jpg' %}",
-          title: "Web Design",
-          description: "We create stunning and user-friendly web designs tailored to your brand.",
-          features: ["Responsive Design", "Custom UI/UX", "SEO Optimization"],
-          details: "Our web design services focus on delivering visually appealing and functional websites that drive engagement and conversions."
-      },
-      "web-development": {
-          image: "{% static 'assets/img/web-development.jpeg' %}",
-          title: "Web Development",
-          description: "We build robust and scalable web applications to meet your business needs.",
-          features: ["Frontend Development", "Backend Development", "API Integration"],
-          details: "Our web development team specializes in creating custom solutions that are both efficient and scalable."
-      },
-      "product-management": {
-          image: "{% static 'assets/img/product-management.jpg' %}",
-          title: "Product Management",
-          description: "We help you manage and optimize your product lifecycle for maximum success.",
-          features: ["Product Strategy", "Roadmap Planning", "Market Analysis"],
-          details: "Our product management services ensure your product aligns with market demands and business goals."
-      },
-      "graphic-design": {
-          image: "{% static 'assets/img/graphic-design.jpg' %}",
-          title: "Graphic Design",
-          description: "We craft visually compelling designs that resonate with your audience.",
-          features: ["Logo Design", "Branding", "Print & Digital Media"],
-          details: "Our graphic design team creates unique and impactful visuals that elevate your brand."
-      },
-      "marketing": {
-          image: "{% static 'assets/img/marketing.jpg' %}",
-          title: "Marketing",
-          description: "We develop data-driven marketing strategies to grow your business.",
-          features: ["Digital Marketing", "Social Media Management", "Content Creation"],
-          details: "Our marketing services are designed to increase your brand visibility and drive customer engagement."
-      }
-  };
-</script>
-
-
   <!-- Vendor JS Files -->
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-<!-- <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script> -->
-<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-<script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
-<script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
-<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
-<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
 
-<!-- Main JS File -->
-<script src="{% static 'assets/js/main.js' %}"></script>
-<script src="{% static 'assets/js/service.js' %}"></script>
-
-
-
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 
