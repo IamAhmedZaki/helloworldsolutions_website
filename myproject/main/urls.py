@@ -29,5 +29,10 @@ urlpatterns = [
     path('portfolio-details3/', views.portfolio_details3, name='portfolio-details3'),
     path('sarter-page/', views.sarter_page, name='sarter-page'),
     path('service-details/', views.service_details, name='service-details'),
+    path('service-details2/', views.service_details, name='service-details2'),
+    path('service-details3/', views.service_details, name='service-details3'),
+    path('service-details4/', views.service_details, name='service-details4'),
+    path('service-details5/', views.service_details, name='service-details5'),
+    path('service-details6/', views.service_details, name='service-details6'),
     path('api/contact/', views.ContactView.as_view(), name='contact'),  # Added trailing slash
 ]
